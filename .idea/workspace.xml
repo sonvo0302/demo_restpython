@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a52bdeb1-5a26-404b-8662-53dcab27857d" name="Default Changelist" comment="" />
+    <list default="true" id="a52bdeb1-5a26-404b-8662-53dcab27857d" name="Default Changelist" comment="">
+      <change beforePath="D:/RestFramework/.idea/workspace.xml" beforeDir="false" afterPath="D:/RestFramework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="D:/RestFramework/demoapi/restapi/urls.py" beforeDir="false" afterPath="D:/RestFramework/demoapi/restapi/urls.py" afterDir="false" />
+      <change beforePath="D:/RestFramework/demoapi/restapi/views.py" beforeDir="false" afterPath="D:/RestFramework/demoapi/restapi/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="D:/RestFramework" />
   </component>
   <component name="ProjectId" id="1qym0zRakfhOU3b5zuaQ9X6x9dy" />
   <component name="ProjectViewState">

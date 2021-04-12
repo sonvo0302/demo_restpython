@@ -32,14 +32,14 @@ class getCourse(APIView):
         return JsonResponse(data=course_serializer.data,status=status.HTTP_400_BAD_REQUEST)
     def delete(self,request):
         course_data=Course.objects.all().delete()
-        return JsonResponse({'message': '{} Tutorials were deleted successfully!'.format(course_data[0])},status=status.HTTP_204_NO_CONTENT)
+        return JsonResponse({'message': '{} Courses were deleted successfully!'.format(course_data[0])},status=status.HTTP_204_NO_CONTENT)
 
 class getCourseDetail(APIView):
     def get(self,request,course_id):
         try:
             course = Course.objects.get(pk=course_id)
         except course.DoesNotExists:
-            return JsonResponse({'message': 'The tutorial does not exist'}, status=status.HTTP_404_NOT_FOUND)
+            return JsonResponse({'message': 'The course does not exist'}, status=status.HTTP_404_NOT_FOUND)
         course_serializer = GetAllCourseSerializer(course)
         return JsonResponse(data=course_serializer.data,status=status.HTTP_200_OK)
     def put(self,request,course_id):
@@ -60,7 +60,11 @@ class getCourseDetail(APIView):
             return JsonResponse({'message': 'The course does not exist'}, status=status.HTTP_404_NOT_FOUND)
         course.delete()
         return JsonResponse({'message': 'Course was deleted successfully!'}, status=status.HTTP_204_NO_CONTENT)
-
+class getCourse_Published(APIView):
+    def get(self,request):
+        course_data=Course.objects.filter(published=True)
+        course_serializer = GetAllCourseSerializer(course_data,many=True)
+        return JsonResponse(data=course_serializer.data,safe=False)
 # @api_view(['GET'])
 # def tutorial_list_published(request):
 #     tutorials = Tutorial.objects.filter(published=True)
